@@ -1,8 +1,8 @@
-public class Dictionary {
+public class Wordle_Dictionary {
     private final String[] words;
     private String[] usedWords;
 
-    public Dictionary(String[] words) {
+    public Wordle_Dictionary(String[] words) {
         this.words = words;
         this.usedWords = new String[5];
     }
@@ -16,4 +16,16 @@ public class Dictionary {
         }
     }
 
+    public String[] getWords() {
+        return this.words;
+    }
+
+    public boolean notUsedWord(String word) {
+        for (String usedWord : this.usedWords) {
+            if (usedWord != null && usedWord.equals(word)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

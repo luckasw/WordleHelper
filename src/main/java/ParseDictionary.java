@@ -2,13 +2,13 @@ import java.io.*;
 
 public class ParseDictionary {
     public static void main(String[] args) throws IOException {
-        String fileName = "words_alpha.txt";
+        String fileName = "words-alpha.txt";
         String[] dictionary = readDictionary(fileName);
         writeDictionary(dictionary);
     }
 
     private static void writeDictionary(String[] dictionary) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("dictionary.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("words-alpha-five.txt"));
         for (String word : dictionary) {
             if (word.length() == 5) {
                 writer.write(word);
